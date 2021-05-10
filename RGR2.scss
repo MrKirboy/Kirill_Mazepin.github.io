@@ -8,12 +8,37 @@ html {
 
   .container {
     display: grid; 
-    grid-template-rows: 1fr, 10fr, 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "head head"
                          "main main"
                          "footer footer";
    }
+
+   //Изменение скроллбара
+//Ширина
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+//Паз скроллбара
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black; 
+  background-color: rgb(20, 20, 20);
+  border-radius: 10px;
+}
+ 
+//Ползунок
+::-webkit-scrollbar-thumb {
+  background: white; 
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+}
+
+//Реакция ползунка на наводку
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
   
   //Хэдер
 .header {
@@ -70,8 +95,8 @@ html {
   //Основная часть
   .main {
     margin-top: 62px;
-    height: 100%;
-    margin-bottom: 50px;
+    height: 90%;
+    padding-bottom: 50px;
     padding-left: 4vw;
     padding-right: 4vw;
     grid-area: main;
@@ -79,7 +104,8 @@ html {
     flex-direction: row;
     justify-content: left;
     align-content: center;
-    overflow:hidden;
+    overflow-y: scroll;
+    overflow-x:hidden;
     position: fixed;
   }
 
@@ -120,6 +146,7 @@ html {
     color: white;
     font-size: 24px;
     text-shadow: 2px 2px 5px black;
+    padding: 15px;
   }
 
   
@@ -156,6 +183,12 @@ html {
     height: 35px;
   }
 
+  .Btns {
+    display: flex;
+    flex-direction: row;
+    transition: 0.08s ease;
+  }
+
   //Изменение при маленьком экране
   @media screen and (max-width: 1000px), (max-height: 600px) {
     .portrait {
@@ -169,8 +202,6 @@ html {
       flex-direction: column;
       justify-content: start;
       align-content: center;
-      overflow-y: scroll;
-      overflow-x:hidden;
     }
 
     @media screen and (max-width: 1200px),(max-height: 500px) {
@@ -198,31 +229,23 @@ html {
         height: 180px;
       }
 
+      .button {
+        padding: 3px;
+        height: 30px;
+      }
+
+      .footer {
+        bottom: -20px;
+      }
+
+      .Btns {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 130px;
+        padding-left: 3px;
+        transition: 0.08s ease;
+      }
+
     }
 
-
-//Изменение скроллбара
-//Ширина
-::-webkit-scrollbar {
-  width: 14px;
-}
-
-//Паз скроллбара
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px black; 
-  background-color: rgb(20, 20, 20);
-  border-radius: 10px;
-}
- 
-//Ползунок
-::-webkit-scrollbar-thumb {
-  background: white; 
-  box-shadow: 0 0 10px black;
-  border-radius: 10px;
-}
-
-//Реакция ползунка на наводку
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
-}
   }
