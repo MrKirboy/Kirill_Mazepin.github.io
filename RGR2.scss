@@ -153,6 +153,7 @@ html {
   // Кнопки
   .button {
     padding: 5px;
+    height: 35px;
   }
 
   //Изменение при маленьком экране
@@ -170,6 +171,33 @@ html {
       align-content: center;
       overflow-y: scroll;
       overflow-x:hidden;
+    }
+
+    @media screen and (max-width: 500px),(max-height: 500px) {
+      
+      .header a {
+        font-size: 18px;
+        line-height: 16px;
+        border-radius: 4px;
+      }
+      
+      // Ник
+      .header a.logo {
+        font-size: 24px;
+      }
+
+      .bio {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      .preview {
+        height: 200px;
+      }
+
     }
 
 

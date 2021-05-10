@@ -116,7 +116,8 @@ h1 {
   background-image: linear-gradient(to top, black, transparent); }
 
 .button {
-  padding: 5px; }
+  padding: 5px;
+  height: 35px; }
 
 @media screen and (max-width: 1000px), (max-height: 600px) {
   .portrait {
@@ -130,8 +131,25 @@ h1 {
     justify-content: start;
     align-content: center;
     overflow-y: scroll;
-    overflow-x: hidden; }
+    overflow-x: hidden; } }
+@media screen and (max-width: 1000px) and (max-width: 500px), screen and (max-height: 600px) and (max-width: 500px), screen and (max-width: 1000px) and (max-height: 500px), (max-height: 600px) and (max-height: 500px) {
+  .header a {
+    font-size: 18px;
+    line-height: 16px;
+    border-radius: 4px; }
 
+  .header a.logo {
+    font-size: 24px; }
+
+  .bio {
+    font-size: 18px; }
+
+  h1 {
+    font-size: 44px; }
+
+  .preview {
+    height: 200px; } }
+@media screen and (max-width: 1000px), (max-height: 600px) {
   ::-webkit-scrollbar {
     width: 14px; }
 
