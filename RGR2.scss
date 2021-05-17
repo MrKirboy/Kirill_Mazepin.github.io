@@ -134,6 +134,13 @@ html {
     transition: 0.2s ease;
   }
 
+  .drawing {
+    padding: 15px;
+    height: 75vh;
+    width: 75vh;
+    filter: drop-shadow(0 0 10px black);
+  }
+
   // Фото
   .portrait {
     padding-top: 30px;
@@ -141,21 +148,26 @@ html {
   }
 
   // Текстовый блок
-  .bio {
+  .text {
     font-family: 'Times New Roman', Times, serif;
     color: white;
     font-size: 24px;
     text-shadow: 2px 2px 5px black;
-    padding: 15px;
+    padding: 20px;
   }
 
   
-  h1 {
+  h1, h2 {
     font-family: 'Oswald', sans-serif; 
     font-weight: 100;
     text-align:center;
     padding-right: 4vw;
     font-size: 64px;
+  }
+
+  h2 {
+    font-size: 32px;
+    text-align: left;
   }
 
   //Футер
@@ -183,6 +195,12 @@ html {
     height: 35px;
   }
 
+  .button:hover {
+    opacity: 0.7;
+    border: 3px solid rgb(160, 33, 33);
+    transition: 0.2s ease;
+  }
+
   .Btns {
     display: flex;
     flex-direction: row;
@@ -204,7 +222,7 @@ html {
       align-content: center;
     }
 
-    @media screen and (max-width: 1200px),(max-height: 500px) {
+    @media screen and (max-width: 600px),(max-height: 500px) {
       
       .header a {
         font-size: 18px;
@@ -217,7 +235,7 @@ html {
         font-size: 24px;
       }
 
-      .bio {
+      .text {
         font-size: 18px;
       }
 
@@ -244,6 +262,12 @@ html {
         padding-bottom: 130px;
         padding-left: 3px;
         transition: 0.08s ease;
+      }
+
+      .drawing {
+        height: 50vh;
+        width: 50vh;
+        align-self: center;
       }
 
     }
