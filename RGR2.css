@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   background: url(Images/BackDrop/back.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -11,6 +12,11 @@ html {
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "head head" "main main" "footer footer"; }
 
+@font-face {
+  font-family: Oswald;
+  /* Гарнитура шрифта */
+  src: url(Fonts/Oswald/Oswald-VariableFont_wght.ttf);
+  /* Путь к файлу со шрифтом */ }
 ::-webkit-scrollbar {
   width: 14px; }
 

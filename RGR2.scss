@@ -15,6 +15,11 @@ html {
                          "footer footer";
    }
 
+   @font-face {
+    font-family: Oswald; /* Гарнитура шрифта */
+    src: url(Fonts/Oswald/Oswald-VariableFont_wght.ttf); /* Путь к файлу со шрифтом */
+   }
+
    //Изменение скроллбара
 //Ширина
 ::-webkit-scrollbar {
